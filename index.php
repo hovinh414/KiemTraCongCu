@@ -43,9 +43,9 @@
 <div class="login-container">
     <h2>Đăng nhập</h2>
     <form action="login.php" method="post">
-        <label for="username">Username:</label>
+        <label for="username">Tên Đăng Nhập:</label>
         <input type="text" id="username" name="username" required>
-        <label for="password">Password:</label>
+        <label for="password">Mật Khẩu:</label>
         <input type="password" id="password" name="password" required>
         <input type="submit" value="Login">
     </form>
