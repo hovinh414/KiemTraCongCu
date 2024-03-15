@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +16,14 @@
             height: 100vh;
             background-color: #f4f4f4;
         }
+
         .login-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         input[type="text"],
         input[type="password"],
         input[type="submit"] {
@@ -31,6 +34,7 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
+
         input[type="submit"] {
             background-color: #4CAF50;
             color: white;
@@ -38,15 +42,35 @@
         }
     </style>
 </head>
+
 <body>
 
-<div class="login-container">
-    <h2>Đăng nhập</h2>
-    <form action="login.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-    </form>
-</div>
+    <div class="login-container">
+        <h2>Đăng nhập</h2>
+        <form id="loginForm" action="index.php" method="post">
+            <label for="username">Tên Đăng Nhập:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Mật Khẩu:</label>
+            <input type="password" id="password" name="password" required>
+            <input type="submit" value="Đăng nhập">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "admin") {
+                window.location.href = "login_success.php";
+                event.preventDefault();
+            }
+            else {
+                alert("Đăng nhập không thành công")
+            }
+        });
+    </script>
 
 </body>
+
 </html>
