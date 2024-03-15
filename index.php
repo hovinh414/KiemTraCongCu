@@ -45,31 +45,13 @@
 
 <body>
 
-    <div class="login-container">
-        <h2>Đăng nhập</h2>
-        <form id="loginForm" action="index.php" method="post">
-            <label for="username">Tên Đăng Nhập:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Mật Khẩu:</label>
-            <input type="password" id="password" name="password" required>
-            <input type="submit" value="Đăng nhập">
-        </form>
-    </div>
-
-    <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            if (username === "admin" && password === "admin") {
-                window.location.href = "login_success.php";
-                event.preventDefault();
-            }
-            else {
-                alert("Đăng nhập không thành công")
-            }
-        });
-    </script>
+<div class="login-container">
+    <h2>Đăng nhập</h2>
+    <form action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+    </form>
+</div>
 
 </body>
 
