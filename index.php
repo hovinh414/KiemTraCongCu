@@ -47,7 +47,7 @@
         <input type="text" id="username" name="username" required>
         <label for="password">Mật Khẩu:</label>
         <input type="password" id="password" name="password" required>
-        <input type="submit" value="Login">
+        <input type="submit" value="Đăng nhập">
     </form>
 </div>
 
