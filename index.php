@@ -45,8 +45,9 @@
     <form action="login.php" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
-        <label for="matkhau">Mật khẩu:</label>
-        <input type="text" id="matkhau" name="matkhau" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
     </form>
 </div>
 
